@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
 :root {
   --primary-color: #053465;
   --custome-grey: #292E49;
@@ -6,18 +8,16 @@
 * {
   font-family: 'Poppins', sans-serif;
   z-index: 2;
-  background-color: #000;
 }
-
-/* body{
-    background-color: blue;
-} */
 
 /* navbar style */
 .navbar {
   z-index: 3;
 }
 
+.navbar .container .navbar-color-text{
+  color: var(--primary-color);
+}
 
 /* hero style */
 #hero {
@@ -48,65 +48,58 @@
 
 /* portofolio style */
 #portofolio {
-  height: 100vh;
+  height: 740px;
   width: 100%;
 }
 
 .portofolio-tagline h1 {
   color: var(--custome-grey);
-  margin-top: 2rem;
+  margin-top: 16px;
 }
 
-/* carousel style */
-.carousel-inner {
-  padding: 1em;
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
 }
 
-.card {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  padding: 1rem;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 6vh;
-  height: 6vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .carousel-item {
-    margin-right: 0;
-    flex: 0 0 33.333333%;
-    display: block;
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+
+.swiper-button-next{
+  right: 0;
+  color:red;
+}
+
+.swiper-button-prev{
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
   }
-
-  .carousel-inner {
-    display: flex;
-  }
-}
-
-.card .img-wrapper {
-  max-width: 100%;
-  height: 13em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card img {
-  max-height: 100%;
-}
-
-@media (max-width: 767px) {
-  .card .img-wrapper {
-    height: 17em;
+  .swiper-navBtn{
+    display: none;
   }
 }
+
 
 /* information style */
 #information {
@@ -137,7 +130,7 @@
 
 /* Produk & Jasa style */
 #product {
-  height: 80vh;
+  height: 585px;
   width: 100%;
 }
 
@@ -173,6 +166,13 @@
 
 #footer {
   width: 100%;
-  height: 30vh;
+  height: 200px;
   background-color: #000;
+  /* position: absolute; */
+}
+
+/* coorporate style */
+#coorporate {
+  height: 100vh;
+  width: 100%;
 }
