@@ -19,6 +19,8 @@
   color: var(--primary-color);
 }
 
+/* HOME PAGE */
+
 /* hero style */
 #hero {
   background: linear-gradient(160deg, var(--primary-color), #000);
@@ -176,6 +178,14 @@
   width: 100%;
 }
 
+.font-responsive {
+  font-size: 1rem;
+  justify-content: end;
+}
+
+
+/* ABOUT PAGE */
+
 /* coorporate style */
 #coorporate {
   height: 100vh;
@@ -190,16 +200,65 @@
   border-radius: 16px;
 }
 
-@media screen and (max-width: 600px) {
-  .btn-survey {
-    width: 20rem;
-    height: 3.75rem;
-  }
-}
 
 /* logo style */
 #logo {
   height: 100vh;
   width: 100%;
   margin-top: 50px;
+}
+
+/* opportunity style */
+#opportunity {
+  background: linear-gradient(160deg, var(--primary-color), #000);
+  height: 26.875rem;
+  width: 100%;
+}
+
+.opportunity-img {
+  width: 30rem;
+  height: 75vh;
+}
+
+/* procedure style */
+#procedure {
+  height: 50vh;
+}
+
+.fs-procedure {
+  font-size: 2rem;
+}
+
+/* about footer */
+#about-footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+  .btn-survey {
+    width: 20rem;
+    height: 3.75rem;
+  }
+
+  .font-responsive {
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .opportunity-img {
+    display: none;
+  }
+
+  .fs-procedure {
+    font-size: 1rem;
+  }
+
+
 }
