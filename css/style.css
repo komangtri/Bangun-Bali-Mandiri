@@ -135,6 +135,10 @@
   width: 100%;
 }
 
+#product::-webkit-scrollbar {
+  display: none;
+}
+
 .img-product {
   width: 355px;
   height: 195px;
@@ -176,4 +180,26 @@
 #coorporate {
   height: 100vh;
   width: 100%;
+}
+
+.btn-survey {
+  background-color: var(--primary-color);
+  color: #ffff;
+  width: 25rem;
+  height: 3.75rem;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .btn-survey {
+    width: 20rem;
+    height: 3.75rem;
+  }
+}
+
+/* logo style */
+#logo {
+  height: 100vh;
+  width: 100%;
+  margin-top: 50px;
 }
