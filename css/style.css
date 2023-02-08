@@ -222,7 +222,7 @@
 
 /* procedure style */
 #procedure {
-  height: 50vh;
+  height: 100vh;
 }
 
 .fs-procedure {
@@ -231,7 +231,6 @@
 
 /* about footer */
 #about-footer {
-  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -260,5 +259,8 @@
     font-size: 1rem;
   }
 
+  #procedure {
+    height: 50vh;
+  }
 
 }
