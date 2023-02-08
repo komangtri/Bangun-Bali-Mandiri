@@ -15,6 +15,7 @@
   z-index: 3;
 }
 
+
 .navbar .container .navbar-color-text {
   color: var(--primary-color);
 }
@@ -115,6 +116,15 @@
   font-size: 20px;
 }
 
+.fs-information {
+  font-size: 36px;
+  width: 347px;
+}
+
+.self-end {
+  align-self: center;
+}
+
 .btn-info {
   width: 280px;
   height: 60px;
@@ -124,6 +134,7 @@
 
 .text-information {
   color: #333333;
+  font-size: 16px;
 }
 
 .btn-info:hover {
@@ -211,7 +222,7 @@
 /* opportunity style */
 #opportunity {
   background: linear-gradient(160deg, var(--primary-color), #000);
-  height: 26.875rem;
+  height: 75vh;
   width: 100%;
 }
 
@@ -229,6 +240,11 @@
   font-size: 2rem;
 }
 
+.fs-text-paragraf {
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
 /* about footer */
 #about-footer {
   left: 0;
@@ -238,16 +254,53 @@
   right: 0;
 }
 
+/* products style */
+#products {
+  height: 100vh;
+}
+
+/* galeri style */
+#galeri {
+  height: 100vh;
+}
+
+.galeri {
+  max-width: 100%;
+}
+
+.text-galeri-judul {
+  font-size: 32px;
+}
+
+.text-galeri {
+  font-size: 16px;
+}
+
+.font-galeri {
+  font-size: 16px;
+}
+
+/* contact us */
+.img-contact {
+  width: 37.5rem;
+  height: 40rem;
+}
+
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
+  .img-hero {
+    display: none;
+  }
+
   .btn-survey {
     width: 20rem;
     height: 3.75rem;
   }
 
   .font-responsive {
-    font-size: 11px;
+    font-size: 14px;
     justify-content: center;
   }
 
@@ -259,8 +312,61 @@
     font-size: 1rem;
   }
 
+  .fs-information {
+    font-size: 24px;
+  }
+
+  .font-information {
+    font-size: 12px;
+  }
+
+  .self-end {
+    align-self: flex-end;
+  }
+
+  .text-information {
+    color: #333333;
+    font-size: 12px;
+  }
+
+  .btn-info {
+    width: 150px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+  }
+
   #procedure {
     height: 50vh;
+  }
+
+  .fs-text-paragraf {
+    font-size: 10px;
+    margin-top: 1rem;
+  }
+
+  .text-galeri-judul {
+    font-size: 24px;
+  }
+
+  .text-galeri {
+    font-size: 10px;
+  }
+
+  .font-galeri {
+    font-size: 12px;
+  }
+
+  #galeri {
+    height: auto;
+  }
+
+  #product {
+    height: auto;
+  }
+
+  .img-contact {
+    display: none;
   }
 
 }
