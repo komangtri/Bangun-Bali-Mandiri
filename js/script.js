@@ -1,37 +1,3 @@
-// var multipleCardCarousel = document.querySelector(
-//   "#carouselExampleControls"
-// );
-// if (window.matchMedia("(min-width: 768px)").matches) {
-//   var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-//     interval: false,
-//   });
-//   var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-//   var cardWidth = $(".carousel-item").width();
-//   var scrollPosition = 0;
-//   $("#carouselExampleControls .carousel-control-next").on("click", function () {
-//     if (scrollPosition < carouselWidth - cardWidth * 4) {
-//       scrollPosition += cardWidth;
-//       $("#carouselExampleControls .carousel-inner").animate({
-//           scrollLeft: scrollPosition
-//         },
-//         600
-//       );
-//     }
-//   });
-//   $("#carouselExampleControls .carousel-control-prev").on("click", function () {
-//     if (scrollPosition > 0) {
-//       scrollPosition -= cardWidth;
-//       $("#carouselExampleControls .carousel-inner").animate({
-//           scrollLeft: scrollPosition
-//         },
-//         600
-//       );
-//     }
-//   });
-// } else {
-//   $(multipleCardCarousel).addClass("slide");
-// }
-
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 4,
     spaceBetween: 25,
@@ -63,4 +29,51 @@ var swiper = new Swiper(".slide-content", {
             slidesPerView: 4,
         }
     },
+});
+
+const navbar = document.getElementsByTagName('nav')[0];
+window.addEventListener('scroll', function (e) {
+    console.log(window.scrollY)
+    if (window.scrollY > 1) {
+        navbar.classList.replace('bg-transparant', 'nav-color')
+    } else if (window.screenY <= 0) {
+        navbar.classList.replace('nav-color', 'bg-transparant')
+    }
+})
+
+var slideDown = {
+    distance: '150%',
+    origin: 'top',
+    opacity: null,
+    duration: 1000
+}
+
+var slideRight = {
+    distance: '150%',
+    origin: 'left',
+    opacity: null,
+    duration: 2000
+}
+
+var slideLeft = {
+    distance: '150%',
+    origin: 'right',
+    opacity: null,
+    duration: 2000
+}
+
+var slideUp = {
+    distance: '150%',
+    origin: 'down',
+    opacity: null,
+    duration: 1000
+}
+
+ScrollReveal().reveal('#hero', slideDown);
+ScrollReveal().reveal('#portofolio', {
+    easing: 'ease-in-out'
+});
+ScrollReveal().reveal('#information', slideLeft);
+ScrollReveal().reveal('#product', {
+    easing: 'ease-in'
 });

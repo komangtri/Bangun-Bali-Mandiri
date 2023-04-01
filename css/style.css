@@ -15,6 +15,14 @@
   z-index: 3;
 }
 
+.nav-color {
+  background-color: var(--primary-color);
+  transition: all ease-in-out 0.5s;
+}
+
+.bg-transparant {
+  transition: all ease-in-out 0.5s;
+}
 
 .navbar .container .navbar-color-text {
   color: var(--primary-color);

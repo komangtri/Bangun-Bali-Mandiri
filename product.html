@@ -26,7 +26,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-transparant">
+    <nav class="navbar navbar-expand-lg bg-transparant position-fixed w-100">
         <div class="container">
             <a class="navbar-brand fw-bold navbar-color-text" href="#">Bangun Bali Mandiri</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
 
     <!-- Section Produk & Jasa -->
     <section id="product" class="position-relative overflow-scroll">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row my-3">
                 <div class="col text-center">
                     <h2 class="my-4">Produk & Jasa</h2>
@@ -203,10 +203,71 @@
     <!-- Swiper JS -->
     <!--Uncomment this line-->
     <script src="js/swiper-bundle.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- JavaScript -->
-    <!--Uncomment this line-->
-    <script src="js/script.js"></script>
+    <!-- javascript -->
+    <script>
+        const navbar = document.getElementsByTagName('nav')[0]
+        const text0 = document.getElementsByTagName('a')[0]
+        const text1 = document.getElementsByTagName('a')[1]
+        const text2 = document.getElementsByTagName('a')[2]
+        const text3 = document.getElementsByTagName('a')[3]
+        const text4 = document.getElementsByTagName('a')[4]
+        const text5 = document.getElementsByTagName('a')[5]
+        window.addEventListener('scroll', function (e) {
+            console.log(window.scrollY)
+            if (window.scrollY > 1) {
+                navbar.classList.replace('bg-transparant', 'nav-color')
+                text0.classList.replace('navbar-color-text', 'text-white')
+                text1.classList.replace('navbar-color-text', 'text-white')
+                text2.classList.replace('navbar-color-text', 'text-white')
+                text3.classList.replace('navbar-color-text', 'text-white')
+                text4.classList.replace('navbar-color-text', 'text-white')
+                text5.classList.replace('navbar-color-text', 'text-white')
+            } else if (window.screenY <= 0) {
+                navbar.classList.replace('nav-color', 'bg-transparant')
+                text0.classList.replace('text-white', 'navbar-color-text')
+                text1.classList.replace('text-white', 'navbar-color-text')
+                text2.classList.replace('text-white', 'navbar-color-text')
+                text3.classList.replace('text-white', 'navbar-color-text')
+                text4.classList.replace('text-white', 'navbar-color-text')
+                text5.classList.replace('text-white', 'navbar-color-text')
+            }
+        })
+
+        var slideDown = {
+            distance: '150%',
+            origin: 'top',
+            opacity: null,
+            duration: 1000
+        }
+
+        var slideRight = {
+            distance: '150%',
+            origin: 'left',
+            opacity: null,
+            duration: 2000
+        }
+
+        var slideLeft = {
+            distance: '150%',
+            origin: 'right',
+            opacity: null,
+            duration: 2000
+        }
+
+        var slideUp = {
+            distance: '150%',
+            origin: 'down',
+            opacity: null,
+            duration: 1000
+        }
+
+        ScrollReveal().reveal('#information', slideLeft);
+        ScrollReveal().reveal('#product', slideRight);
+    </script>
+
 
     <!-- BOOSTRAP JS -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
