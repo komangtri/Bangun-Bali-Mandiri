@@ -274,6 +274,11 @@
 /* galeri style */
 #galeri {
   height: 100vh;
+  overflow: scroll;
+}
+
+#galeri::-webkit-scrollbar {
+  display: none;
 }
 
 .galeri {
