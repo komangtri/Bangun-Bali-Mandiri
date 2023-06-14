@@ -305,10 +305,8 @@
 
 /* contact us */
 .img-contact {
-  width: 50rem;
-  top: 20%;
-  left: 10%;
-  /* transform: translate(-50%, -50%); */
+  width: 70rem;
+  transform: translate(-20%, -10%);
   /* background-color: #eaeaea; */
 
 }
