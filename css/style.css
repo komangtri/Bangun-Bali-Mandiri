@@ -306,7 +306,8 @@
 /* contact us */
 .img-contact {
   width: 70rem;
-  transform: translate(-20%, -10%);
+  transform: translate(-30%, -10%);
+  overflow: hidden;
   /* background-color: #eaeaea; */
 }
 
@@ -492,3 +493,9 @@ body{
 
 }
 
+/* @media screen and (max-width: 900px) {
+  .img-contact{
+    width: 50rem;
+    transform: translate(-20%, -10%);
+  }
+} */
